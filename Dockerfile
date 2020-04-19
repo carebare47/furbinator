@@ -65,9 +65,9 @@ RUN set +x && \
     cd /home/user/Arduino/furbinator && \
     latest_branch=$(git for-each-ref --count=30 --sort=-committerdate refs/remotes/ | head -n 1 | sed 's;.*/;;g') && \
     git checkout $latest_branch
-    #\
-    #echo "Updating arduino preferences..." && \
-    #wget -O /home/user/.arduino15/preferences.txt https://raw.githubusercontent.com/tiltr/tiltr-firmware/master/preferences.txt
+    \
+    echo "Updating arduino preferences..." && \
+    wget -O /home/user/.arduino15/preferences.txt https://raw.githubusercontent.com/tiltr/tiltr-firmware/master/preferences.txt
 
 
 USER root
