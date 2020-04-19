@@ -61,7 +61,7 @@ RUN set +x && \
     arduino-cli lib install "MPU6050" && \
     \
     echo "Cloning and checking out latest branch of furbinator..." && \
-    git clone https://github.com/carebare47/furbinator /home/user/Arduino/furbinator && \ 
+    git clone https://github.com/carebare47/ez-arduino-spidey /home/user/Arduino/furbinator && \ 
     cd /home/user/Arduino/furbinator && \
     latest_branch=$(git for-each-ref --count=30 --sort=-committerdate refs/remotes/ | head -n 1 | sed 's;.*/;;g') && \
     git checkout $latest_branch
